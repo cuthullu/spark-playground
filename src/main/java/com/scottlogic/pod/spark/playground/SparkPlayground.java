@@ -15,9 +15,8 @@ public class SparkPlayground {
 
         SparkSession spark = SparkSession.builder()
                 .appName("SparkPlayground")
-                .master("spark://localhost:7077") // You can set your Spark master URL here
-                // .config("spark.dynamicAllocation.enabled", "false")
-                // .master("local[*]")
+                .master("local[*]")
+                // .master("spark://localhost:7077") // Switch to this to run against a local cluster
                 .getOrCreate();
 
         SparkContext cs = spark.sparkContext();

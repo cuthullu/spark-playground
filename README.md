@@ -41,3 +41,24 @@ Then spin up a couple of worker nodes, running the following in their own shells
 `spark-class org.apache.spark.deploy.worker.Worker spark://localhost:7077  --host localhost`
 
 Modify `SparkPlayground` to use `.master("spark://localhost:7077")` instead of `.master("local[*]")`
+
+
+# Resources
+
+
+Spark 101 - https://www.youtube.com/watch?v=4pSSv1GlkU0
+
+---
+
+Docs
+
+https://spark.apache.org/docs/latest/quick-start.html
+
+https://github.com/apache/spark/tree/master/examples/src/main/java/org/apache/spark/examples
+
+
+https://spark.apache.org/examples.html
+
+**Warning out of date: 0.9.0** but some useful info on key differences with using Java
+https://spark.apache.org/docs/0.9.0/java-programming-guide.html
+
