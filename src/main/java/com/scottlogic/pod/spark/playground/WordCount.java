@@ -26,7 +26,7 @@ public class WordCount {
     }
 
     public void count() {
-        JavaRDD<String> textFile = jsc.textFile("./example-words.txt");
+        JavaRDD<String> textFile = jsc.textFile(".data/example-words.txt");
 
         /**
          * Task: Modify this to clean the data- remove any junk, fix capitalisation
