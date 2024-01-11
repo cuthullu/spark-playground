@@ -17,11 +17,12 @@ public class SparkPlayground {
                 .appName("SparkPlayground")
                 .master("local[*]")
                 // .master("spark://localhost:7077") // Switch to this to run against a local cluster
+                .enableHiveSupport()
                 .getOrCreate();
 
         SparkContext cs = spark.sparkContext();
         JavaSparkContext jcs = new JavaSparkContext(cs);
-        
+
         /*
          * Each of these can be uncommented to run them
          */
