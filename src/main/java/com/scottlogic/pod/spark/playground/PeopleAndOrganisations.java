@@ -136,7 +136,12 @@ public class PeopleAndOrganisations {
          */
 
         /*
-         * Task: Find out which industry has the most diverse set of job involved
+         * Task: Find out which industry has the most diverse set of jobs involved
+         */
+
+        /*
+         * Task: Combine the rankings of the 3 different employability measures to get a
+         * combined ranking top 10
          */
 
         spark.stop();
