@@ -17,10 +17,10 @@ import org.apache.spark.sql.types.StructType;
 import scala.Tuple2;
 
 public class WordCount {
-    private SparkSession spark;
+        private SparkSession spark;
     private JavaSparkContext jsc;
 
-    WordCount(SparkSession spark, JavaSparkContext jsc) {
+    public WordCount(SparkSession spark, JavaSparkContext jsc) {
         this.spark = spark;
         this.jsc = jsc;
     }
@@ -57,9 +57,9 @@ public class WordCount {
                 .map(tuple -> RowFactory.create(tuple._1(), tuple._2()))
                 .collect();
 
-        Dataset<Row> df; //
+        Dataset<Row> df; // 
         // df.show();
-
+        
         /**
          * Task: Find and show the most frequent word
          */
@@ -70,4 +70,18 @@ public class WordCount {
 
     }
 
+    public Long countDistinctWords(String path) {
+        JavaRDD<String> textFile = jsc.textFile(path);
+
+        JavaPairRDD<String, Integer> counts = textFile
+        .map((entry) -> (entry.replaceAll("[!,.]", "")))
+        .map((entry) -> (entry.toLowerCase()))
+        .flatMap((s) -> {
+                return Arrays.asList(s.split(" ")).iterator();
+        })
+        .mapToPair(word -> new Tuple2<>(word, 1))
+        .reduceByKey((a, b) -> a + b);
+
+        return counts.count();
+    }
 }
