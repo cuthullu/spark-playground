@@ -17,7 +17,7 @@ import org.apache.spark.sql.types.StructType;
 import scala.Tuple2;
 
 public class WordCount {
-        private SparkSession spark;
+    private SparkSession spark;
     private JavaSparkContext jsc;
 
     public WordCount(SparkSession spark, JavaSparkContext jsc) {
@@ -57,9 +57,9 @@ public class WordCount {
                 .map(tuple -> RowFactory.create(tuple._1(), tuple._2()))
                 .collect();
 
-        Dataset<Row> df; // 
+        Dataset<Row> df; //
         // df.show();
-        
+
         /**
          * Task: Find and show the most frequent word
          */
