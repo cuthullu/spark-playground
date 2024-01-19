@@ -37,16 +37,14 @@ public class WordCountSteps extends SparkIntegrationTestBase {
         this.path = path;
     }
 
-    @Then("I should get the expected count")
-    public void correctCountTest() {
-        Long ExpectedValue = new Long(188);
-        assertEquals(ExpectedValue, wordCount.countDistinctWords(this.path));
+    @Then("I should get a count of {long}")
+    public void correctCountTest(Long expectedValue) {
+        assertEquals(expectedValue, wordCount.countDistinctWords(this.path));
     }
 
-    @Then("I should get the wrong count")
-    public void incorrectCountTest() {
-        Long ExpectedValue = new Long(3149);
-        assertNotEquals(ExpectedValue, wordCount.countDistinctWords(this.path));
+    @Then("I should not get a count of {long}")
+    public void incorrectCountTest(Long incorrectValue) {
+        assertNotEquals(incorrectValue, wordCount.countDistinctWords(this.path));
     }
 
     @Then("I should get an exception")
