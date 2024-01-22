@@ -1,0 +1,246 @@
+[
+    {
+        "yearNum": 1,
+        "classNum": 1,
+        "teacherName": "Hollee Haney",
+        "teacherLogin": {
+            "userId": "93b3f5bd-0423-42ac-b80e-7164081bfaff",
+            "username": "HHaney"
+        },
+        "students": [
+            {
+                "studentName": "Maxwell York",
+                "studentAge": 5
+            },
+            {
+                "studentName": "Lynn Albert",
+                "studentAge": 5
+            },
+            {
+                "studentName": "Myles Kidd",
+                "studentAge": 5
+            },
+            {
+                "studentName": "Demetria Woodard",
+                "studentAge": 6
+            },
+            {
+                "studentName": "Cally Watkins",
+                "studentAge": 6
+            }
+        ]
+    },
+    {
+        "yearNum": 2,
+        "classNum": 1,
+        "teacherName": "Courtney Berg",
+        "teacherLogin": {
+            "userId": "93b3f5bd-0423-42ac-b80e-7164081bfaff",
+            "username": "CBerg"
+        },
+        "students": [
+            {
+                "studentName": "Zephania Leon",
+                "studentAge": 6
+            },
+            {
+                "studentName": "Janna Maddox",
+                "studentAge": 7
+            },
+            {
+                "studentName": "Lesley Reynolds",
+                "studentAge": 6
+            },
+            {
+                "studentName": "Brett Rocha",
+                "studentAge": 7
+            }
+        ]
+    },
+    {
+        "yearNum": 2,
+        "classNum": 2,
+        "teacherName": "Hollee Haney",
+        "teacherLogin": {
+            "userId": "93b3f5bd-0423-42ac-b80e-7164081bfaff",
+            "username": "HHaney"
+        },
+        "students": [
+            {
+                "studentName": "Sonya Steele",
+                "studentAge": 7
+            },
+            {
+                "studentName": "Andrew Jensen",
+                "studentAge": 7
+            },
+            {
+                "studentName": "Nigel Hood",
+                "studentAge": 7
+            },
+            {
+                "studentName": "Adrian Duncan",
+                "studentAge": 7
+            },
+            {
+                "studentName": "Miranda Woodward",
+                "studentAge": 6
+            }
+        ]
+    },
+    {
+        "yearNum": 3,
+        "classNum": 1,
+        "teacherName": "Sacha Banks",
+        "teacherLogin": {
+            "userId": "93b3f5bd-0423-42ac-b80e-7164081bfaff",
+            "username": "SBanks"
+        },
+        "students": [
+            {
+                "studentName": "Rafael Wilcox",
+                "studentAge": 7
+            },
+            {
+                "studentName": "Steven Erickson",
+                "studentAge": 8
+            },
+            {
+                "studentName": "Steven Gomez",
+                "studentAge": 8
+            },
+            {
+                "studentName": "Riley Petersen",
+                "studentAge": 8
+            },
+            {
+                "studentName": "Lani Farley",
+                "studentAge": 7
+            }
+        ]
+    },
+    {
+        "yearNum": 4,
+        "classNum": 1,
+        "teacherName": "Rahim Roberson",
+        "teacherLogin": {
+            "userId": "93b3f5bd-0423-42ac-b80e-7164081bfaff",
+            "username": "RRoberson"
+        },
+        "students": [
+            {
+                "studentName": "Chantale Mckay",
+                "studentAge": 8
+            },
+            {
+                "studentName": "Jamalia Gillespie",
+                "studentAge": 8
+            },
+            {
+                "studentName": "Stacey Ashley",
+                "studentAge": 8
+            },
+            {
+                "studentName": "Lucius Holt",
+                "studentAge": 9
+            },
+            {
+                "studentName": "Chancellor Richmond",
+                "studentAge": 8
+            }
+        ]
+    },
+    {
+        "yearNum": 5,
+        "classNum": 1,
+        "teacherName": "Alexis Hopper",
+        "teacherLogin": {
+            "userId": "93b3f5bd-0423-42ac-b80e-7164081bfaff",
+            "username": "AHopper"
+        },
+        "students": [
+            {
+                "studentName": "Karina Holden",
+                "studentAge": 10
+            },
+            {
+                "studentName": "Fleur Battle",
+                "studentAge": 9
+            },
+            {
+                "studentName": "Jasmine Hurley",
+                "studentAge": 9
+            },
+            {
+                "studentName": "Kirestin Orr",
+                "studentAge": 10
+            },
+            {
+                "studentName": "Rebecca Mendez",
+                "studentAge": 9
+            }
+        ]
+    },
+    {
+        "yearNum": 6,
+        "classNum": 1,
+        "teacherName": "Molly Murphy",
+        "teacherLogin": {
+            "userId": "93b3f5bd-0423-42ac-b80e-7164081bfaff",
+            "username": "MMurphy"
+        },
+        "students": [
+            {
+                "studentName": "Lysandra Gill",
+                "studentAge": 10
+            },
+            {
+                "studentName": "Tiger Wells",
+                "studentAge": 10
+            },
+            {
+                "studentName": "Sylvester Strong",
+                "studentAge": 10
+            },
+            {
+                "studentName": "Vielka Sargent",
+                "studentAge": 11
+            },
+            {
+                "studentName": "Walter Boone",
+                "studentAge": 10
+            }
+        ]
+    },
+    {
+        "yearNum": 7,
+        "classNum": 1,
+        "teacherName": "Macon Jordan",
+        "teacherLogin": {
+            "userId": "93b3f5bd-0423-42ac-b80e-7164081bfaff",
+            "username": "MJordan"
+        },
+        "students": [
+            {
+                "studentName": "Cody Bell",
+                "studentAge": 11
+            },
+            {
+                "studentName": "Nolan Parks",
+                "studentAge": 12
+            },
+            {
+                "studentName": "Jelani Larson",
+                "studentAge": 11
+            },
+            {
+                "studentName": "Illana Ochoa",
+                "studentAge": 11
+            },
+            {
+                "studentName": "Quon Petty",
+                "studentAge": 12
+            }
+        ]
+    }
+]
