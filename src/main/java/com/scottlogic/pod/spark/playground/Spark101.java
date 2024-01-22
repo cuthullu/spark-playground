@@ -52,7 +52,7 @@ public class Spark101 {
 
         /*
          * Task:
-         * using the DF provided, create a new table of the student objects and their
+         * Using the DF provided, create a new table of the student objects and their
          * school year
          * 
          * The functions that you may/will need to use for this are:
@@ -70,8 +70,7 @@ public class Spark101 {
 
         /*
          * Task:
-         * And finaly, building off of the last table, the mean age of each school year
-         * and the mode of each school year
+         * Following on, what is the mean age and the mode age of each school year
          * 
          * The functions that you may/will need to use for this are:
          * - functions.groupBy(...)
@@ -82,9 +81,7 @@ public class Spark101 {
 
         /*
          * Task:
-         * Produce a new table (from the original DF) with the two columns, teacher name
-         * and the Key Stage they
-         * teach
+         * Please create a new Table of the school teachers and the Key stage they teach
          * 
          * https://thinkstudent.co.uk/school-year-groups-key-stages/
          * 
@@ -104,8 +101,9 @@ public class Spark101 {
          */
 
         /*
-         * From the original dataframe, using functions.slice, create a table of each
-         * year number and the first student listed in the classe
+         * Task:
+         * Finaly, using functions.slice, create a table of each year number, the class
+         * number and the name of the first student listed in each class
          * 
          * The functions that you may/will need to use for this are:
          * - functions.slice(...)
