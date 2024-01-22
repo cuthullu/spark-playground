@@ -16,7 +16,8 @@ public class SparkPlayground {
         SparkSession spark = SparkSession.builder()
                 .appName("SparkPlayground")
                 .master("local[*]")
-                // .master("spark://localhost:7077") // Switch to this to run against a local cluster
+                // .master("spark://localhost:7077") // Switch to this to run against a local
+                // cluster
                 .enableHiveSupport()
                 .getOrCreate();
 
@@ -35,6 +36,9 @@ public class SparkPlayground {
 
         // CSVReader csvReader = new CSVReader(spark, jcs);
         // csvReader.run();
+
+        // Spark101 spark101 = new Spark101(spark, jcs);
+        // spark101.run();
 
         // // Stop the Spark session
         logger.info("Stopping spark legend demo app");
