@@ -5,6 +5,7 @@ import org.apache.spark.sql.Dataset;
 import org.apache.spark.sql.Row;
 import org.apache.spark.sql.SparkSession;
 import org.apache.spark.sql.functions;
+
 /*
  * Covers:
  * 
@@ -18,11 +19,11 @@ import org.apache.spark.sql.functions;
  * - functions.mean(...) / functions.avg(...)
  * - functions.mode(...)
  * 
- * Data manipulation
+ * Data manipulation :-
  * - .when(...)
  * - col(...).lt(...), col(...).leq(...), col(...).gt(...), col(...).geq(...)
  * - .and(...)
- * - .otherwise
+ * - .otherwise(...)
  * 
  * Slightly unusual :-
  * - functions.size(...)
