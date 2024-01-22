@@ -5,6 +5,29 @@ import org.apache.spark.sql.Dataset;
 import org.apache.spark.sql.Row;
 import org.apache.spark.sql.SparkSession;
 import org.apache.spark.sql.functions;
+/*
+ * Covers:
+ * 
+ * Object and array manipulation :-
+ * functions.explode(...)
+ * .col(...).getField(...)
+ * 
+ * Data collecting :-
+ * - .groupBy(...)
+ * - .agg(...)
+ * - functions.mean(...) / functions.avg(...)
+ * - functions.mode(...)
+ * 
+ * Data manipulation
+ * - .when(...)
+ * - col(...).lt(...), col(...).leq(...), col(...).gt(...), col(...).geq(...)
+ * - .and(...)
+ * - .otherwise
+ * 
+ * Slightly unusual :-
+ * - functions.size(...)
+ * - functions.slice(...)
+ */
 
 public class Spark101 {
 
@@ -29,16 +52,11 @@ public class Spark101 {
         /*
          * Task:
          * using the DF provided, create a new table of the student objects and their
-         * school
-         * year
+         * school year
          * 
          * The functions that you may/will need to use for this are:
          * - functions.explode(...)
          */
-        // uses explode to seperate out the list
-        Dataset<Row> allStudents = df.select(df.col("yearNum"),
-                functions.explode(df.col("students")).alias("students"));
-        allStudents.show();
 
         /*
          * Task:
@@ -48,13 +66,6 @@ public class Spark101 {
          * The functions that you may/will need to use for this are:
          * - .col(...).getField(...)
          */
-
-        // uses getField to break down the objects
-
-        allStudents = allStudents.select(allStudents.col("yearNum"),
-                allStudents.col("students").getField("studentName").as("Name"),
-                allStudents.col("students").getField("studentAge").as("Age"));
-        allStudents.show();
 
         /*
          * Task:
@@ -67,10 +78,6 @@ public class Spark101 {
          * - functions.mean(...) / functions.avg(...)
          * - functions.mode(...)
          */
-
-        // finds averages for each year
-        allStudents.groupBy("yearNum").agg(functions.avg(allStudents.col("Age")),
-                functions.mode(allStudents.col("Age"))).show();
 
         /*
          * Task:
@@ -87,14 +94,6 @@ public class Spark101 {
          * - .otherwise
          */
 
-        Dataset<Row> teacherDf = df.select("teacherName", "yearNum");
-        teacherDf = teacherDf.withColumn("KS",
-                functions.when(teacherDf.col("yearNum").lt(3), "KS1")
-                        .when(teacherDf.col("yearNum").geq(3).and(teacherDf.col("yearNum").leq(6)), "KS2")
-                        .when(teacherDf.col("yearNum").gt(6), "KS3").otherwise("Error"));
-
-        teacherDf.show();
-
         /*
          * Task:
          * Produce a new table containing the year, class number and class size
@@ -103,9 +102,6 @@ public class Spark101 {
          * - functions.size(...)
          */
 
-        df.select("yearNum", "classNum", "students").withColumn("classSize", functions.size(df.col("students")))
-                .drop("students").show();
-
         /*
          * From the original dataframe, using functions.slice, create a table of each
          * year number and the first student listed in the classe
@@ -113,16 +109,6 @@ public class Spark101 {
          * The functions that you may/will need to use for this are:
          * - functions.slice(...)
          */
-
-        // shows the names of each kid and their class
-        Dataset<Row> classStudents = df.select(df.col("yearNum"),
-                df.col("students").getField("studentName").as("Names"));
-
-        // Takes the element of the list selected (starts at 1) and takes the number of
-        // elements selected (length) and provides that list. This could be useful to
-        // show/select a specific number of elements
-        classStudents.select(classStudents.col("yearNum"),
-                functions.explode(functions.slice(classStudents.col("Names"), 1, 1)).as("firstStudent")).show();
 
     }
 
