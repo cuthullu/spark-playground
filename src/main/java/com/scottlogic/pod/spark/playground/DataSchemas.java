@@ -9,7 +9,8 @@ import org.apache.spark.sql.types.StructField;
 public class DataSchemas {
 
     public static List<StructField> peopleSchema = Arrays.asList(
-            DataTypes.createStructField("Index", DataTypes.IntegerType, false));
+            DataTypes.createStructField("Index", DataTypes.IntegerType, false),
+            DataTypes.createStructField("User Id", DataTypes.StringType, false));
 
     public static List<StructField> organisationSchema = Arrays.asList(
             DataTypes.createStructField("Index", DataTypes.IntegerType, false));

@@ -48,6 +48,8 @@ Modify `SparkPlayground` to use `.master("spark://localhost:7077")` instead of `
 
 Spark 101 - https://www.youtube.com/watch?v=4pSSv1GlkU0
 
+Some example data: https://www.datablist.com/learn/csv/download-sample-csv-files
+
 ---
 
 Docs
