@@ -1,4 +1,4 @@
-package com.scottlogic.pod.spark.playground.steps;
+package com.scottlogic.pod.spark.playground.cucumber.steps;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotEquals;
