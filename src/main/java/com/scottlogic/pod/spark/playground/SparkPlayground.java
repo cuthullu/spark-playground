@@ -43,10 +43,25 @@ public class SparkPlayground {
         // LearnJoins learnJoins = new LearnJoins(spark, jcs);
         // learnJoins.run();
 
+        // StreamingText streamingText = new StreamingText(spark);
+        // try {
+        // streamingText.run();
+        // } catch (Exception e) {
+        // e.printStackTrace();
+        // }
+
+        // StreamingFiles streamingFiles = new StreamingFiles(spark);
+        // try {
+        // streamingFiles.run();
+        // } catch (Exception e) {
+        // e.printStackTrace();
+        // }
+
+        // keepAlive();
+
         // // Stop the Spark session
         logger.info("Stopping spark legend demo app");
         spark.stop();
-        // keepAlive();
     }
 
     private static void keepAlive() {
