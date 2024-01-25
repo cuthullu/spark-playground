@@ -1,9 +1,9 @@
-package com.scottlogic.pod.spark.playground;
+package com.scottlogic.pod.spark.playground.cucumber;
 
 import org.junit.runner.RunWith;
 
 import io.cucumber.junit.Cucumber;
 
 @RunWith(Cucumber.class)
-public class WordCountRunnerTest {
+public class WordCountCucumberRunner {
 }
