@@ -40,6 +40,9 @@ public class SparkPlayground {
         // Spark101 spark101 = new Spark101(spark, jcs);
         // spark101.run();
 
+        // LearnJoins learnJoins = new LearnJoins(spark, jcs);
+        // learnJoins.run();
+
         // // Stop the Spark session
         logger.info("Stopping spark legend demo app");
         spark.stop();
