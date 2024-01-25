@@ -9,7 +9,7 @@ public class CSVReader {
     private SparkSession spark;
     private JavaSparkContext jsc;
 
-    CSVReader(SparkSession spark, JavaSparkContext jsc) {
+    public CSVReader(SparkSession spark, JavaSparkContext jsc) {
         this.spark = spark;
         this.jsc = jsc;
     }
@@ -39,5 +39,9 @@ public class CSVReader {
         /*
          * Task: Calculate the combined age all people with the same Job Titles
          */
+    }
+
+    public long countCsv(String filePath) {
+        return spark.read().csv(filePath).count();
     }
 }
